@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>映画リスト</title>
+</head>
+<body>
+    <h1>上映中の映画</h1>
+    <p>ここにmapでリストを作りたい</p>
+    <ul>
+        
+        <% @movies.each do |movie| %>
+            <li>
+                <h2><%= movie.name %></h2>
+                <img src="<%= movie.image_url %>" alt="<%= movie.name %>" width="200">
+            </li>            
+        <% end %>
+    </ul>
+</body>
+</html>
