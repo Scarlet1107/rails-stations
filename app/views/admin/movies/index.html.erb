@@ -35,7 +35,7 @@
             <td><%= movie.is_showing ? "上映中" : "上映予定" %></td>
             <td><%= movie.created_at %></td>
             <td><%= movie.updated_at %></td>
-            <td><%= link_to  "ID#{movie.id}を編集", edit_admin_movie_path(movie) %></td>
+            <td><%= link_to  "編集", edit_admin_movie_path(movie) %></td>
           </tr>
         <% end %>
       </tbody>
