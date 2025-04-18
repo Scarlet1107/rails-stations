@@ -9,6 +9,19 @@ class Admin::MoviesController < ApplicationController
     @movie = Movie.new
   end
 
+  def edit
+    @movie = Movie.find(params[:id])
+  end
+
+  def update
+    @movie = Movie.find(params[:id])
+    if @movie.update(movie_params)
+      redirect_to admin_movies_path, notice: "更新しました"
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def create
     @movie = Movie.new(movie_params)
 
