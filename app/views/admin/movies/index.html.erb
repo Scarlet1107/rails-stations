@@ -10,6 +10,15 @@
       <h1 class="text-4xl font-bold">管理者用 映画一覧ページ</h1>
       <%= link_to  "追加", new_admin_movie_path %>
     </div>
+    <div class="mb-4">
+      <%= label_tag :keyword, "キーワード検索" %>
+      <%= text_field_tag :keyword, params[:keyword], class: "border rounded px-2 py-1" %>
+    </div>
+    <div class="mb-4">
+      <%= label_tag :is_showing, "公開状態" %> <br>
+      <%= radio_button_tag :is_showing, %>
+    </div>
+    <!-- 編集中..... -->
     <table>
       <thead>
         <tr>
