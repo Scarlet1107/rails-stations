@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400;
+    max-width: 32rem;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    @apply w-4 h-4 text-blue-600 border-gray-300 rounded;
+  }
+
+  button[type="submit"],
+  input[type="submit"] {
+    @apply bg-blue-600 text-white font-semibold px-4 py-2 rounded hover:bg-blue-700 transition;
+  }
+
+  h1 {
+    @apply text-2xl font-bold mb-6 text-gray-800;
+  }
+
+  table {
+    @apply w-full table-auto border-collapse text-sm text-left;
+  }
+
+  thead {
+    @apply bg-gray-100 text-gray-700;
+  }
+
+  th,
+  td {
+    @apply border px-4 py-2;
+  }
+
+  tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+
+  tr:hover {
+    @apply bg-gray-200;
+  }
+
+  a {
+    @apply text-blue-600 underline hover:text-blue-800;
+  }
+}
